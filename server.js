@@ -8,7 +8,7 @@ app.get("/",function(req,res){
 })
 */
 
-var middleleware ={
+/*var middleleware ={
     requireAuthentication : function(req, res, next){
         console.log("özel root girildi!!");
         next();
@@ -18,6 +18,9 @@ var middleleware ={
         next();
     }
 }
+*/
+
+var middleleware = require("./middleware");
 
 app.use(middleleware.logger);
 
